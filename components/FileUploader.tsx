@@ -25,7 +25,7 @@ const FileUploader = ({ ownerId, accountId, className }: Props) => {
     setFiles(acceptedFiles);
 
     const uploadPromises = acceptedFiles.map(async (file) => {
-      console.log({ file, ownerId, accountId, path });
+      
 
       if (file.size > MAX_FILE_SIZE) {
         setFiles((prevFiles) => prevFiles.filter((f) => f.name !== file.name));
